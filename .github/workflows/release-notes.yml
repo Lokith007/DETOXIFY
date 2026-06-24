@@ -16,6 +16,6 @@ jobs:
         with:
           fetch-depth: 0
 
-      - uses: SaajidAhamed007/ReleasePilot@v1
+      - uses: SaajidAhamed007/ReleasePilot@v1.0.1
         with:
           gemini-api-key: ${{ secrets.GEMINI_API_KEY }}
