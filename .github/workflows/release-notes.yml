@@ -1,0 +1,21 @@
+name: Generate Release Notes
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  release-notes:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: SaajidAhamed007/ReleasePilot@v1
+        with:
+          gemini-api-key: ${{ secrets.GEMINI_API_KEY }}
